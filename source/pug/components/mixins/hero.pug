@@ -1,0 +1,17 @@
+mixin hero(items = {})
+
+  .hero
+    .container
+      h1.hero__title Заголовок блока
+      p.hero__desciption Текстовое описание блока
+      ul.hero__list
+      each item in items
+        li.hero__item
+          .hero__label-wrapper
+            span.hero__number= item.number
+            h2.hero__label= item.title
+          .hero__info-wrapper
+            p.hero__info= item.info
+
+
+
