@@ -1,11 +1,4 @@
 <!DOCTYPE html>
-<div class="software-card">
-  <div class="software-card__inner"><span class="software-card__tag">Тег карточки</span>
-    <h2 class="software-card__heading">Заголовок</h2>
-  </div>
-  <p class="software-card__description">Описание карточки с программным обеспечением</p><a class="software-card__btn btn" href="#">
-    <svg width="178" height="43" viewBox="0 0 178 43" fill="none" xmlns="http://www.w3.org/2000/svg"></svg><span class="btn__text">Подробнее</span></a>
-</div>
 <html lang="ru">
   <head>
     <title>Генератор паролей</title>
@@ -13,35 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="ProjectName — описание">
+    <link rel="preload" href="/fonts/Montserrat-Bold.woff2" as="font">
+    <link rel="preload" href="/fonts/Montserrat-SemiBold.woff2" as="font">
+    <link rel="preload" href="/fonts/Montserrat-Medium.woff2" as="font">
+    <link rel="preload" href="/fonts/Montserrat-Regular.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <div class="visually-hidden"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-close" viewBox="0 0 20 20"><g fill="none"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></g></symbol></svg></div>
     <div class="wrapper">
       <header class="header">
-        <div class="container"><a class="header__logo" href="index.html" aria-label="Переход на главную">Логотип</a>
-          <nav class="main-nav">
-            <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
-              <svg width="20" height="20" aria-hidden="true">
-                <use xlink:href="#icon-burger"></use>
-              </svg>
-            </button>
-            <div class="main-nav__wrapper">
-              <ul class="main-nav__list">
-                <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a>
-                </li>
-                <li class="main-nav__item"><a class="main-nav__link" href="#">Страница 2</a>
-                </li>
-                <li class="main-nav__item"><a class="main-nav__link" href="#">Страница 3</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
+        <div class="container">
+          <h1 class="header__title">Генератор парольных фраз</h1>
         </div>
       </header>
-      <footer class="footer">
-        <div class="container"></div>
-      </footer>
+      <section>
+        <div class="container">
+          <div class="form">
+            <h2 class="visually-hidden">Параметры генератора</h2>
+            <ul class="form__input-list">
+              <li class="form__input-item">
+                <label class="form__control">
+                  <input class="form__input" type="radio" name="letter-count" value="3" checked><span class="form__label">3</span>
+                </label>
+              </li>
+              <li class="form__input-item">
+                <label class="form__control">
+                  <input class="form__input" type="radio" name="letter-count" value="4"><span class="form__label">4</span>
+                </label>
+              </li>
+            </ul>
+            <ul class="form__input-list">
+              <li class="form__input-item">
+                <label class="form__control">
+                  <input class="form__input" type="radio" name="word-count" value="3" checked><span class="form__label">3</span>
+                </label>
+              </li>
+              <li class="form__input-item">
+                <label class="form__control">
+                  <input class="form__input" type="radio" name="word-count" value="4"><span class="form__label">4</span>
+                </label>
+              </li>
+            </ul>
+            <button class="btn form__button-generate" type="button">Генерировать</button>
+            <button class="btn form__button-copy" type="button">Скопировать</button>
+            <div class="form__output"></div>
+          </div>
+        </div>
+      </section>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
