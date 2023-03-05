@@ -20,40 +20,44 @@
           <h1 class="header__title">Генератор парольных фраз</h1>
         </div>
       </header>
-      <section>
-        <div class="container">
-          <div class="form">
-            <h2 class="visually-hidden">Параметры генератора</h2>
-            <ul class="form__input-list">
-              <li class="form__input-item">
-                <label class="form__control">
-                  <input class="form__input" type="radio" name="letter-count" value="3" checked><span class="form__label">3</span>
-                </label>
-              </li>
-              <li class="form__input-item">
-                <label class="form__control">
-                  <input class="form__input" type="radio" name="letter-count" value="4"><span class="form__label">4</span>
-                </label>
-              </li>
-            </ul>
-            <ul class="form__input-list">
-              <li class="form__input-item">
-                <label class="form__control">
-                  <input class="form__input" type="radio" name="word-count" value="3" checked><span class="form__label">3</span>
-                </label>
-              </li>
-              <li class="form__input-item">
-                <label class="form__control">
-                  <input class="form__input" type="radio" name="word-count" value="4"><span class="form__label">4</span>
-                </label>
-              </li>
-            </ul>
-            <button class="btn form__button-generate" type="button">Генерировать</button>
-            <button class="btn form__button-copy" type="button">Скопировать</button>
-            <div class="form__output"></div>
+      <main class="main">
+        <section>
+          <div class="container">
+            <div class="form">
+              <h2 class="visually-hidden">Параметры генератора</h2>
+              <ul class="form__list">
+                <li class="form__item">
+                  <label class="form__control">
+                    <input class="visually-hidden form__input" type="radio" name="letter-count" value="3" checked><span class="form__mark-radio"></span><span class="form__label">3</span>
+                  </label>
+                </li>
+                <li class="form__item">
+                  <label class="form__control">
+                    <input class="visually-hidden form__input" type="radio" name="letter-count" value="4"><span class="form__mark-radio"></span><span class="form__label">4</span>
+                  </label>
+                </li>
+              </ul>
+              <div class="form__text">символа</div>
+              <ul class="form__list">
+                <li class="form__item">
+                  <label class="form__control">
+                    <input class="visually-hidden form__input" type="radio" name="word-count" value="3" checked><span class="form__mark-radio"></span><span class="form__label">3</span>
+                  </label>
+                </li>
+                <li class="form__item">
+                  <label class="form__control">
+                    <input class="visually-hidden form__input" type="radio" name="word-count" value="4"><span class="form__mark-radio"></span><span class="form__label">4</span>
+                  </label>
+                </li>
+              </ul>
+              <div class="form__text">слова</div>
+              <button class="btn form__button form__button--generate" type="button">Генерировать</button>
+              <button class="btn form__button form__button--copy" type="button">Скопировать</button>
+              <div class="form__output"></div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>

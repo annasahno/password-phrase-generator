@@ -1,24 +1,30 @@
 mixin form()
   .form
     h2.visually-hidden Параметры генератора
-    ul.form__input-list
-      li.form__input-item
+    ul.form__list
+      li.form__item
         label.form__control
-          input.form__input(type="radio", name="letter-count", value=3, checked)
+          input.visually-hidden.form__input(type="radio", name="letter-count", value=3, checked)
+          span.form__mark-radio
           span.form__label 3
-      li.form__input-item
+      li.form__item
         label.form__control
-          input.form__input(type="radio", name="letter-count", value=4)
+          input.visually-hidden.form__input(type="radio", name="letter-count", value=4)
+          span.form__mark-radio
           span.form__label 4
-    ul.form__input-list
-      li.form__input-item
+    .form__text символа
+    ul.form__list
+      li.form__item
         label.form__control
-          input.form__input(type="radio", name="word-count", value=3, checked)
+          input.visually-hidden.form__input(type="radio", name="word-count", value=3, checked)
+          span.form__mark-radio
           span.form__label 3
-      li.form__input-item
+      li.form__item
         label.form__control
-          input.form__input(type="radio", name="word-count", value=4)
+          input.visually-hidden.form__input(type="radio", name="word-count", value=4)
+          span.form__mark-radio
           span.form__label 4
-    +btn({text: "Генерировать", type:"button"}).form__button-generate
-    +btn({text: "Скопировать", type:"button"}).form__button-copy
+    .form__text слова
+    +btn({text: "Генерировать", type:"button"}).form__button.form__button--generate
+    +btn({text: "Скопировать", type:"button"}).form__button.form__button--copy
     div.form__output
