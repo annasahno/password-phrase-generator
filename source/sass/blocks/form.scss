@@ -1,0 +1,94 @@
+.form {
+  margin: 0 auto;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: max-content auto auto;
+  gap: 10px 10px;
+  align-items: center;
+}
+
+.form__list {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+  list-style-type: none;
+  grid-column: 1;
+}
+
+.form__item {
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 10px;
+  }
+}
+
+.form__control {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  transition: opacity $trans-default;
+}
+
+.form__mark-radio {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid $color-neon-blue;
+  border-radius: 50%;
+
+  &::before {
+    content: "";
+    transition: background-color $trans-default;
+  }
+}
+
+.form__input:checked + .form__mark-radio {
+  &::before {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 3px;
+    left: 3px;
+    border-radius: 50%;
+    background-color: $color-neon-blue;
+  }
+}
+
+.form__control:hover,
+.form__control:focus-within {
+  opacity: 0.7;
+}
+
+.form__control:active {
+  opacity: 0.4;
+}
+
+.form__text {
+  grid-column: 2;
+}
+
+.form__button {
+  grid-column: 3;
+  justify-content: center;
+
+  &--generate {
+    grid-row: 1;
+  }
+
+  &--copy {
+    grid-row: 2;
+  }
+}
+
+.form__output {
+  grid-column: 1 / -1;
+  margin-top: 70px;
+  padding: 40px;
+  min-height: 200px;
+  border: 2px solid $color-neon-blue;
+}
